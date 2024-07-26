@@ -1,70 +1,198 @@
-# Getting Started with Create React App
+## MERN Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is the frontend part of a MERN stack application, built with React, Redux, and TailwindCSS. It handles user authentication, content creation, and content management, including image, video, and text content.
 
-## Available Scripts
+### Table of Contents
+
+- [Prerequisites](#prerequisites)
+- [Installation](#installation)
+- [Environment Variables](#environment-variables)
+- [Available Scripts](#available-scripts)
+- [Folder Structure](#folder-structure)
+- [Usage](#usage)
+- [Testing](#testing)
+
+### Prerequisites
+
+Ensure you have the following installed:
+
+- Node.js (v14 or above)
+- npm (v6 or above) or yarn
+
+### Installation
+
+1. Clone the repository:
+
+   ```sh
+   git clone https://github.com/your-repo/mern-frontend.git
+   cd mern-frontend
+   ```
+
+2. Install the dependencies:
+
+   ```sh
+   npm install
+   ```
+
+   or if you are using yarn:
+
+   ```sh
+   yarn install
+   ```
+
+### Environment Variables
+
+Create a `.env` file in the root of your project and add the following line:
+
+```sh
+REACT_APP_API_URL=http://localhost:5001/api
+```
+
+### Available Scripts
 
 In the project directory, you can run:
 
-### `npm start`
+#### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Runs the app in the development mode.
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+The page will reload if you make edits.
+You will also see any lint errors in the console.
 
-### `npm test`
+#### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Launches the test runner.
 
-### `npm run build`
+#### `npm run build`
 
-Builds the app for production to the `build` folder.\
+Builds the app for production to the `build` folder.
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+#### `npm run eject`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-### `npm run eject`
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Folder Structure
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```plaintext
+mern-frontend/
+│
+├── node_modules/
+├── public/
+│   ├── index.html
+│   └── ...
+├── src/
+│   ├── components/
+│   │   ├── AddContentModal/
+│   │   │   ├── AddContentModal.jsx
+│   │   │   ├── AddContentModal.css
+│   │   │   └── __test__/
+│   │   │       └── AddContentModal.test.jsx
+│   │   ├── ContentList/
+│   │   │   ├── ContentList.jsx
+│   │   │   ├── ContentList.css
+│   │   │   └── __test__/
+│   │   │       └── ContentList.test.jsx
+│   │   ├── CountsDisplay/
+│   │   │   ├── CountsDisplay.jsx
+│   │   │   └── __test__/
+│   │   │       └── CountsDisplay.test.jsx
+│   │   ├── ErrorMessage/
+│   │   │   ├── ErrorMessage.jsx
+│   │   │   └── __test__/
+│   │   │       └── ErrorMessage.test.jsx
+│   │   ├── Navbar/
+│   │   │   ├── Navbar.jsx
+│   │   │   ├── Navbar.css
+│   │   │   └── __test__/
+│   │   │       └── Navbar.test.jsx
+│   │   ├── PasswordInput/
+│   │   │   ├── PasswordInput.jsx
+│   │   │   └── __test__/
+│   │   │       └── PasswordInput.test.jsx
+│   │   ├── SearchFilters/
+│   │   │   ├── SearchFilters.jsx
+│   │   │   └── __test__/
+│   │   │       └── SearchFilters.test.jsx
+│   │   ├── SelectInput/
+│   │   │   ├── SelectInput.jsx
+│   │   │   └── __test__/
+│   │   │       └── SelectInput.test.jsx
+│   │   ├── TextInput/
+│   │   │   ├── TextInput.jsx
+│   │   │   └── __test__/
+│   │   │       └── TextInput.test.jsx
+│   │   └── ...
+│   ├── pages/
+│   │   ├── Home/
+│   │   │   ├── Home.jsx
+│   │   │   ├── Home.css
+│   │   │   └── __test__/
+│   │   │       └── Home.test.jsx
+│   │   ├── Login/
+│   │   │   ├── Login.jsx
+│   │   │   ├── Login.css
+│   │   │   └── __test__/
+│   │   │       └── Login.test.jsx
+│   │   ├── Register/
+│   │   │   ├── Register.jsx
+│   │   │   ├── Register.css
+│   │   │   └── __test__/
+│   │   │       └── Register.test.jsx
+│   │   └── ...
+│   ├── redux/
+│   │   ├── slices/
+│   │   │   └── authSlice.js
+│   │   ├── thunks/
+│   │   │   └── authThunks.js
+│   │   └── store.js
+│   ├── utils/
+│   │   └── validators.js
+│   ├── App.js
+│   ├── index.js
+│   └── ...
+├── .env
+├── .gitignore
+├── package.json
+└── README.md
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Usage
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+1. Start the backend server (make sure it's running on `http://localhost:5001` as specified in the `.env` file).
+2. Start the React app:
 
-## Learn More
+   ```sh
+   npm start
+   ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+3. Open [http://localhost:3000](http://localhost:3000) to view the app in the browser.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Testing
 
-### Code Splitting
+To run tests, use the following command:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```sh
+npm test
+```
 
-### Analyzing the Bundle Size
+This will run the tests using Vitest.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### TailwindCSS
 
-### Making a Progressive Web App
+TailwindCSS is used for styling. The utility classes are used directly in the JSX files. Additional custom styles can be found in the respective CSS files.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Redux
 
-### Advanced Configuration
+Redux is used for state management, with slices defined in the `redux/slices` directory. Asynchronous actions are handled using thunks, which can be found in the `redux/thunks` directory. The store configuration is in `redux/store.js`.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Axios
 
-### Deployment
+Axios is used for making HTTP requests to the backend API. The base URL is configured using the environment variable `REACT_APP_API_URL`.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+---
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Feel free to customize this README as per your project's needs.
