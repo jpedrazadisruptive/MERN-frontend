@@ -1,4 +1,5 @@
 ## MERN Frontend
+![Screenshot 2024-07-26 at 14 59 53](https://github.com/user-attachments/assets/57dfd94c-912a-4552-aec0-5da300aa931c)
 
 This is the frontend part of a MERN stack application, built with React, Redux, and TailwindCSS. It handles user authentication, content creation, and content management, including image, video, and text content.
 
