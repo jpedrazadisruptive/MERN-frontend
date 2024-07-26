@@ -1,0 +1,27 @@
+.register-container {
+  @apply max-w-md mx-auto p-4 bg-white shadow-lg rounded-lg mt-10;
+}
+
+.register-header {
+  @apply text-2xl font-bold mb-6 text-center;
+}
+
+.register-form {
+  @apply space-y-4;
+}
+
+.input-field {
+  @apply w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500;
+}
+
+.select-field {
+  @apply w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500;
+}
+
+.register-button {
+  @apply w-full bg-blue-500 text-white p-2 rounded hover:bg-blue-600 disabled:opacity-50;
+}
+
+.error-message {
+  @apply text-red-500 mt-2;
+}
